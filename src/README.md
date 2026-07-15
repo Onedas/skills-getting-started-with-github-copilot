@@ -18,7 +18,7 @@ A super simple FastAPI application that allows students to view and sign up for 
 2. Run the application:
 
    ```
-   python app.py
+   uvicorn src.app:app --reload
    ```
 
 3. Open your browser and go to:
@@ -48,3 +48,19 @@ The application uses a simple data model with meaningful identifiers:
    - Grade level
 
 All data is stored in memory, which means data will be reset when the server restarts.
+
+## Running Backend Tests
+
+Backend tests live in the `tests` directory at the repository root.
+
+1. Install dependencies:
+
+   ```
+   pip install -r requirements.txt
+   ```
+
+2. Run all backend tests:
+
+   ```
+   pytest -q
+   ```
